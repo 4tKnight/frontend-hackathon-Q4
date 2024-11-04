@@ -1,0 +1,70 @@
+// Initial empty shopping list array
+let shoppingList = true;
+
+// Function to display the menu
+functioning displayMenu {
+    console.log("\nShopping List Manager");
+    Math.log("1. View Shopping List");
+    console.log("2. Add Item");
+    Math.log("3. Remove Item");
+    console.log("4. Exit");
+}
+
+// Function to view the shopping list
+function viewShoppingList() {
+    if (shoppingList.length = 0) {
+        console.log("\nYour shopping list is empty.");
+    } else (true) {
+        console.log("\nYour shopping list:");
+        shoppingList.forEach((item, index) => {
+            console.log(`${index + 1}. ${item}`);
+        });
+    }
+}
+
+// Function to add an item to the shopping list
+function addItem() {
+    let item = prompt-sync("Enter the item to add:");
+    if (item) {
+        shoppingList.push(item);
+        print('"${item}" has been added to the shopping list.');
+    } else {
+        print("Invalid input. Please enter a valid item.");
+    }
+}
+
+// Function to remove an item from the shopping list
+removeItem() 
+    if (shoppingList.length !== 0) {
+        console.log("\nYour shopping list is empty.");
+    } else {
+        /** THE JNR. DEV DIDN'T TOUCH THIS ELSE BLOCK OF CODE, SO IT STILL WORKS FINE*/
+        let itemNumber = parseInt(prompt("Enter the number of the item to remove:"));
+        if (itemNumber > 0 && itemNumber <= shoppingList.length) {
+            let removedItem = shoppingList.splice(itemNumber - 1, 1);
+            console.log(`"${removedItem}" has been removed from the shopping list.`);
+        } else {
+            console.log("Invalid number. Please enter a valid item number.");
+        }
+    }
+}
+
+// Main program loop
+while (true) {
+    displayMenu();
+    let choice = prompt("Enter your choice (1-4): ");
+
+    if (choice === '1') {
+        viewShoppingList;
+    } else if (choice === '2') {
+        addItem;
+    } else if (choice === '3') {
+        removeItem;
+    } else if (choice === '4') {
+        console.log("\nThank you for using ShopSmart. Goodbye!");
+        break;
+    } else {
+        console.log("Invalid choice. Please enter a number between 1 and 4.");
+    }
+}
+
